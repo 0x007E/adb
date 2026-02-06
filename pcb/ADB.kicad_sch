@@ -1173,11 +1173,11 @@
         )
       )
     )
-    (symbol "power:VDD" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
+    (symbol "power:VEE" (power) (pin_names (offset 0)) (in_bom yes) (on_board yes)
       (property "Reference" "#PWR" (at 0 -3.81 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "Value" "VDD" (at 0 3.81 0)
+      (property "Value" "VEE" (at 0 3.81 0)
         (effects (font (size 1.27 1.27)))
       )
       (property "Footprint" "" (at 0 0 0)
@@ -1189,18 +1189,10 @@
       (property "ki_keywords" "global power" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Power symbol creates a global label with name \"VDD\"" (at 0 0 0)
+      (property "ki_description" "Power symbol creates a global label with name \"VEE\"" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "VDD_0_1"
-        (polyline
-          (pts
-            (xy -0.762 1.27)
-            (xy 0 2.54)
-          )
-          (stroke (width 0) (type default))
-          (fill (type none))
-        )
+      (symbol "VEE_0_1"
         (polyline
           (pts
             (xy 0 0)
@@ -1211,16 +1203,18 @@
         )
         (polyline
           (pts
+            (xy 0.762 1.27)
+            (xy -0.762 1.27)
             (xy 0 2.54)
             (xy 0.762 1.27)
           )
           (stroke (width 0) (type default))
-          (fill (type none))
+          (fill (type outline))
         )
       )
-      (symbol "VDD_1_1"
+      (symbol "VEE_1_1"
         (pin power_in line (at 0 0 90) (length 0) hide
-          (name "VDD" (effects (font (size 1.27 1.27))))
+          (name "VEE" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
       )
@@ -3536,14 +3530,14 @@
     (property "VendorId" "100326" (at 68.58 38.1 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "3" (uuid c68b49ba-1cdd-47c4-b8a1-f25c030de6f3))
-    (pin "7" (uuid 315dfff5-bb56-4e1b-ab2d-48eb7a7a396c))
-    (pin "8" (uuid 9f44b7b9-5d46-40c1-995e-fb891798da04))
-    (pin "2" (uuid ad5190fb-4da7-4a32-b02c-b325048cd419))
-    (pin "4" (uuid 1d93079f-904f-4fdd-ab1a-5c8b707f48f6))
-    (pin "5" (uuid b3d2ce7d-139c-47b0-8170-a2e287d3dc21))
-    (pin "6" (uuid 3d9759cd-c71a-44c1-9356-6f68c8f3c0ec))
-    (pin "1" (uuid 302cb613-d172-45be-bfd9-81724f27980d))
+    (pin "3" (uuid c68b49ba-1cdd-47c4-b8a1-f25c030de6f4))
+    (pin "7" (uuid 315dfff5-bb56-4e1b-ab2d-48eb7a7a396d))
+    (pin "8" (uuid 9f44b7b9-5d46-40c1-995e-fb891798da05))
+    (pin "2" (uuid ad5190fb-4da7-4a32-b02c-b325048cd41a))
+    (pin "4" (uuid 1d93079f-904f-4fdd-ab1a-5c8b707f48f7))
+    (pin "5" (uuid b3d2ce7d-139c-47b0-8170-a2e287d3dc22))
+    (pin "6" (uuid 3d9759cd-c71a-44c1-9356-6f68c8f3c0ed))
+    (pin "1" (uuid 302cb613-d172-45be-bfd9-81724f27980e))
     (instances
       (project "ADB"
         (path "/9334361a-f7a5-4302-90e9-4b89798c8fc6"
@@ -3798,14 +3792,14 @@
     (property "VendorId" "100326" (at 105.41 101.6 0)
       (effects (font (size 1.27 1.27)) hide)
     )
-    (pin "3" (uuid c68b49ba-1cdd-47c4-b8a1-f25c030de6f3))
-    (pin "7" (uuid 315dfff5-bb56-4e1b-ab2d-48eb7a7a396c))
-    (pin "8" (uuid 9f44b7b9-5d46-40c1-995e-fb891798da04))
-    (pin "2" (uuid ad5190fb-4da7-4a32-b02c-b325048cd419))
-    (pin "4" (uuid 1d93079f-904f-4fdd-ab1a-5c8b707f48f6))
-    (pin "5" (uuid b3d2ce7d-139c-47b0-8170-a2e287d3dc21))
-    (pin "6" (uuid 3d9759cd-c71a-44c1-9356-6f68c8f3c0ec))
-    (pin "1" (uuid 302cb613-d172-45be-bfd9-81724f27980d))
+    (pin "3" (uuid c68b49ba-1cdd-47c4-b8a1-f25c030de6f5))
+    (pin "7" (uuid 315dfff5-bb56-4e1b-ab2d-48eb7a7a396e))
+    (pin "8" (uuid 9f44b7b9-5d46-40c1-995e-fb891798da06))
+    (pin "2" (uuid ad5190fb-4da7-4a32-b02c-b325048cd41b))
+    (pin "4" (uuid 1d93079f-904f-4fdd-ab1a-5c8b707f48f8))
+    (pin "5" (uuid b3d2ce7d-139c-47b0-8170-a2e287d3dc23))
+    (pin "6" (uuid 3d9759cd-c71a-44c1-9356-6f68c8f3c0ee))
+    (pin "1" (uuid 302cb613-d172-45be-bfd9-81724f27980f))
     (instances
       (project "ADB"
         (path "/9334361a-f7a5-4302-90e9-4b89798c8fc6"
@@ -4220,31 +4214,6 @@
     )
   )
 
-  (symbol (lib_id "power:VDD") (at 55.88 50.8 180) (unit 1)
-    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
-    (uuid c1f780ae-4f91-4fd2-8db9-cb2d66d623c4)
-    (property "Reference" "#PWR05" (at 55.88 46.99 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Value" "VDD" (at 55.88 54.61 90)
-      (effects (font (size 1.27 1.27)) (justify left))
-    )
-    (property "Footprint" "" (at 55.88 50.8 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (property "Datasheet" "" (at 55.88 50.8 0)
-      (effects (font (size 1.27 1.27)) hide)
-    )
-    (pin "1" (uuid 79c93d78-bb2e-4508-b16f-1e2b5a231fcd))
-    (instances
-      (project "ADB"
-        (path "/9334361a-f7a5-4302-90e9-4b89798c8fc6"
-          (reference "#PWR05") (unit 1)
-        )
-      )
-    )
-  )
-
   (symbol (lib_id "Connector:Conn_01x02_Socket") (at 66.04 90.17 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid c1fcd59c-c514-4b67-8668-ec1955394947)
@@ -4624,6 +4593,31 @@
       (project "ADB"
         (path "/9334361a-f7a5-4302-90e9-4b89798c8fc6"
           (reference "J33") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:VEE") (at 55.88 50.8 180) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid f232dfd5-692c-49be-9d8a-9ed163bcbce8)
+    (property "Reference" "#PWR05" (at 55.88 46.99 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "VEE" (at 55.88 55.88 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 55.88 50.8 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 55.88 50.8 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 480c7b34-f7f5-4301-9e62-f4e7190e9873))
+    (instances
+      (project "ADB"
+        (path "/9334361a-f7a5-4302-90e9-4b89798c8fc6"
+          (reference "#PWR05") (unit 1)
         )
       )
     )
