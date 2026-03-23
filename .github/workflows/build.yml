@@ -44,6 +44,7 @@ jobs:
         retention-days: 1
     
   export-freecad:
+    needs: [export-kicad]
     env:
       FREECADVERSION: "1.0.2"
       FREECADFOLDER: "./mechanical"
@@ -55,6 +56,12 @@ jobs:
     - name: Fetch repository
       uses: actions/checkout@v4
     
+    - name: Download KiCad Artifacts
+      uses: actions/download-artifact@v4
+      with:
+        name: kicad-export
+        path: ./artifact/kicad
+
     - name: Checkout xdb-freecad repository
       uses: actions/checkout@v5
       with:
@@ -66,6 +73,7 @@ jobs:
       run: |
         mkdir -p ${{ env.OUTPUTFOLDER }}
         cp ./LICENSE ${{ env.OUTPUTFOLDER }}
+        cp -r ./artifact/kicad/step/*.step ${{ env.FREECADFOLDER }}/pcb.step
 
     - name: Install FreeCAD
       run: |
@@ -77,7 +85,7 @@ jobs:
       run: |
           git clone https://github.com/0x007E/pyfreecadexport.git
     
-    - name: Modifiy Spreadsheet
+    - name: Modify FreeCAD File
       run: |
           REPO_NAME="$(basename "${{ github.repository }}")"
           REPO_NAME_UPPER="${REPO_NAME^^}"
@@ -86,6 +94,10 @@ jobs:
           cp -r ${{ env.FREECADFOLDER }}/*.otf ./
 
           ./squashfs-root/usr/bin/python ./pyfreecadexport/src/pyfreecadspreadsheet.py -f "${{ env.FREECADFILENAME }}" -s "Parameter" -a "Text_Function" -d "${REPO_NAME_UPPER}" -l "squashfs-root/usr/lib/"
+
+          ./squashfs-root/usr/bin/python ./pyfreecadexport/src/pyfreecadremove.py -f "${{ env.FREECADFILENAME }}" -p "App::Part" -n "PCB" -l "squashfs-root/usr/lib/"
+
+          ./squashfs-root/usr/bin/python ./pyfreecadexport/src/pyfreecadimport.py -f "${{ env.FREECADFILENAME }}" -p "${{ env.FREECADFOLDER }}/pcb.step" -z "-1.6" -l "squashfs-root/usr/lib/"
 
           rm -r ./*.otf
           cp -r ./${{ env.FREECADFILENAME }} ${{ env.FREECADFOLDER }}/${{ env.FREECADFILENAME }}
