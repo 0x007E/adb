@@ -16,6 +16,7 @@ The `ADB` is a board with an [LM358](#additional-information) or any other 2-cha
 | Board | [pdf](https://github.com/0x007E/adb/releases/latest/download/pcb.pdf) / [cadlab](https://cadlab.io/project/29896/main/files) | Board file |
 | Drill | [pdf](https://github.com/0x007E/adb/releases/latest/download/drill.pdf) | Drill file |
 | PCB | [zip](https://github.com/0x007E/adb/releases/latest/download/kicad.zip) / [tar](https://github.com/0x007E/adb/releases/latest/download/kicad.tar.gz) |  	KiCAD/Gerber/BoM/Drill files |
+| Mechanical | [zip](https://github.com/0x007E/adb/releases/latest/download/freecad.zip) / [tar](https://github.com/0x007E/adb/releases/latest/download/freecad.tar.gz) | FreeCAD/Housing and exported step/stl files |
 
 # Hardware
 
