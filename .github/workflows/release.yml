@@ -222,7 +222,6 @@ jobs:
       run: ls -R ./artifact/freecad
     - name: Create Compressed File
       run: |
-        cp -r ./artifact/kicad/step ./artifact/freecad/pcb
         cd ./artifact
         tar -czvf ./freecad.tar.gz ./freecad
         zip -r ./freecad.zip ./freecad
