@@ -2,7 +2,7 @@
 
 # `ADB` - Analog Development Board
 
-The `ADB` is a board with an [LM358](#additional-information) or any other 2-channel operational amplifier. The board itself can be driven with a voltage of `5+/-15V`. The board offers the possibility to create standard `OPA` circuits with `THT` resistors/capacitors and inductors or any other external circuit.
+The `ADB` is a board with an [LM358](#additional-information) or any other 2-channel operational amplifier that meets the pin requirements. The board itself can be driven from `0 to 30V` or `+/-15V`. The board offers the possibility to create standard `OPA` circuits with `THT` resistors/capacitors and inductors or any other external circuit.
 
 | Experience | Level |
 |:------------|:-----:|
